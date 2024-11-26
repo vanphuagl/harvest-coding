@@ -1,0 +1,56 @@
+/* Header
+------------------------------------------------------------*/
+
+.c-header {
+  transition: opacity 0.35s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+
+  &.--hide {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  &_container {
+    position: fixed;
+    top: 44px;
+    width: 100%;
+    padding: 0 50px;
+    z-index: 10;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include maxW(1023px) {
+      top: 22px;
+      padding: 0 22px;
+    }
+  }
+
+  &_left {
+    svg {
+      path {
+        fill: var(--black-cl);
+      }
+    }
+
+    @include maxW(1023px) {
+      svg {
+        width: 90.46px;
+        height: auto;
+      }
+    }
+  }
+
+  &_right {
+    a {
+      font-size: 1.6rem;
+      text-transform: uppercase;
+    }
+
+    @include maxW(1023px) {
+      a {
+        font-size: 1.1rem;
+      }
+    }
+  }
+}

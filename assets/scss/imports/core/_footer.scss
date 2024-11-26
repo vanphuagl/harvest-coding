@@ -1,0 +1,93 @@
+/* Footer
+------------------------------------------------------------*/
+
+.c-footer {
+  &_container {
+    margin-top: 105px;
+    padding: 0 50px;
+
+    @include maxW(1023px) {
+      margin-top: 80px;
+      padding: 0 22px;
+    }
+  }
+
+  &_backtotop {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--black-cl);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    cursor: pointer;
+
+    transition-property: opacity;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+    &:before {
+      content: "";
+      background-color: #fff;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      mix-blend-mode: difference;
+      transform-origin: top left;
+      transform: scaleX(0);
+      transition-property: transform;
+      transition-duration: 250ms;
+      transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    svg {
+      line {
+        stroke: var(--black-cl);
+      }
+    }
+
+    &:hover:before {
+      transform: scaleX(1);
+    }
+  }
+
+  &_inner {
+    margin-top: 30px;
+    padding-top: 70px;
+    padding-bottom: 50px;
+    border-top: 1px solid var(--black-cl);
+    display: flex;
+    justify-content: space-between;
+
+    p,
+    a {
+      font-size: 1.2rem;
+      letter-spacing: 0.408px;
+      line-height: 1.71;
+    }
+
+    @include maxW(1023px) {
+      margin-top: 0;
+      padding-top: 30px;
+      padding-bottom: 20px;
+
+      p,
+      a {
+        font-size: 0.85rem;
+      }
+    }
+  }
+
+  &_right {
+    display: flex;
+    gap: 30px;
+
+    @include maxW(1023px) {
+      gap: 10px;
+    }
+  }
+}
