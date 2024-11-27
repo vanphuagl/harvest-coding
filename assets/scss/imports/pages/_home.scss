@@ -19,7 +19,7 @@
       transform: translate(-50%, -50%);
       z-index: 2;
 
-      h1 {
+      h2 {
         svg {
           path {
             fill: var(--black-cl);
@@ -28,7 +28,7 @@
       }
 
       @include maxW(1023px) {
-        h1 {
+        h2 {
           svg {
             width: 300px;
             height: auto;
@@ -192,7 +192,7 @@
       margin-top: 30px;
 
       display: flex;
-      align-items: baseline;
+      align-items: flex-end;
       gap: 25px;
 
       &:first-child {
@@ -222,7 +222,6 @@
         font-size: 3.662rem;
         font-weight: 700;
         letter-spacing: 4.394px;
-        line-height: 1.48;
       }
 
       @include maxW(1023px) {
@@ -231,14 +230,12 @@
         p {
           font-size: 2.4rem;
           letter-spacing: 0.88px;
-          line-height: 1.73;
         }
       }
     }
 
     &_enname {
       display: flex;
-      align-items: flex-end;
       gap: 12px;
 
       p {

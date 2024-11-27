@@ -29,7 +29,7 @@ const initLenis = () => {
     lerp: 0.05,
     smoothWheel: true,
   });
-  lenis.on("scroll", (e) => {});
+  lenis.on("scroll", (e) => { });
   function raf(time) {
     lenis.raf(time);
     requestAnimationFrame(raf);
@@ -66,6 +66,21 @@ backToTop.addEventListener("click", () => {
   });
   lenis.start();
 });
+
+// ===== fade content ====
+const elementsArray = document.querySelectorAll("[data-ufade]");
+const fadeIn = () => {
+  for (let i = 0; i < elementsArray.length; i++) {
+    let elem = elementsArray[i];
+    let distInView =
+      elem.getBoundingClientRect().top - window.innerHeight + 100;
+    if (distInView < 0) {
+      elem.classList.add("fadein");
+    }
+  }
+};
+window.addEventListener("scroll", fadeIn);
+window.addEventListener("pageshow", fadeIn);
 
 // ===== init =====
 const init = () => {

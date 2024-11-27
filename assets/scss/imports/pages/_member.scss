@@ -1,0 +1,278 @@
+/* -------------------------------------------------------------------------- */
+/*                                 detail page                                */
+/* -------------------------------------------------------------------------- */
+
+.memberpage {
+  .detail {
+    &_container {
+      padding: 210px 120px 130px;
+
+      @include maxW(1023px) {
+        padding: 125px 22px 0;
+      }
+    }
+
+    &_heading {
+      display: flex;
+      align-items: center;
+      gap: 10.5px;
+
+      span {
+        display: block;
+        width: 10px;
+        height: 1px;
+        background-color: var(--black-cl);
+      }
+
+      h2 {
+        font-size: 1.4rem;
+        font-weight: 700;
+        letter-spacing: 0.7px;
+        text-transform: uppercase;
+      }
+
+      @include maxW(1023px) {
+        gap: 8px;
+
+        span {
+          width: 8.5px;
+        }
+
+        h2 {
+          font-size: 1.042rem;
+          letter-spacing: 0.417px;
+        }
+      }
+    }
+
+    &_profile {
+      &_inner {
+        margin-top: 65px;
+        display: grid;
+        grid-template-columns: 300px 1fr;
+        gap: 110px;
+      }
+
+      &_left {
+        figure {
+          display: block;
+          z-index: 1;
+          position: relative;
+          height: 100%;
+          padding-bottom: 100%;
+          background-color: #a1a4ab;
+          border-radius: 50%;
+
+          img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+          }
+        }
+      }
+
+      &_author {
+        display: flex;
+        align-items: flex-end;
+        gap: 25px;
+
+        svg {
+            path {
+                fill: var(--black-cl);
+            }
+        }
+
+        .jpname {
+          display: flex;
+          gap: 12px;
+
+          p {
+            font-family: $noto-fonts;
+            font-size: 4.479rem;
+            font-weight: 700;
+            letter-spacing: 5.375px;
+          }
+        }
+
+        .enname {
+          display: flex;
+          gap: 12px;
+
+          p {
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: 0.432px;
+          }
+        }
+      }
+
+      &_content {
+        margin-top: 40px;
+
+        p {
+          font-size: 1.5rem;
+          font-weight: 700;
+          line-height: 1.8;
+        }
+
+        .jphistory {
+          p {
+            font-family: $noto-fonts;
+            letter-spacing: 1.5px;
+          }
+        }
+
+        .enhistory {
+          p {
+            letter-spacing: 0.48px;
+          }
+        }
+      }
+
+      @include maxW(1023px) {
+        &_inner {
+          margin-top: 40px;
+          display: block;
+        }
+
+        &_left {
+          max-width: 200px;
+        }
+
+        &_author {
+          margin-top: 40px;
+          gap: 14px;
+
+          .jpname {
+            gap: 7px;
+
+            p {
+              font-size: 2.592rem;
+              letter-spacing: 0.907px;
+            }
+          }
+
+          .enname {
+            gap: 7px;
+
+            p {
+              font-size: 1.5rem;
+              letter-spacing: 0;
+            }
+          }
+        }
+
+        &_content {
+          margin-top: 30px;
+
+          p {
+            font-size: 1.2rem;
+          }
+
+          .jphistory p {
+            letter-spacing: 1.2px;
+          }
+
+          .enhistory p {
+            letter-spacing: 0.384px;
+          }
+        }
+      }
+    }
+
+    &_works {
+      margin-top: 190px;
+
+      &_list {
+        margin-top: 60px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+      }
+
+      &_items {
+        cursor: pointer;
+        height: fit-content;
+
+        figure {
+          display: block;
+          z-index: 1;
+          position: relative;
+          height: 100%;
+          padding-bottom: calc(213.75 / 380 * 100%);
+          background-color: #a1a4ab;
+          overflow: hidden;
+
+          img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.4s;
+          }
+        }
+
+        &:hover figure img {
+          transform: scale(1.08);
+        }
+
+        p {
+          margin-top: 15px;
+          font-size: 1.35rem;
+          font-weight: 700;
+          letter-spacing: 0.432px;
+          line-height: 1.8;
+        }
+      }
+
+      @include maxW(1023px) {
+        margin-top: 78px;
+
+        &_list {
+          margin-top: 40px;
+          grid-template-columns: repeat(1, 1fr);
+          gap: 25px;
+        }
+
+        &_items {
+          figure {
+            padding-bottom: calc(208.13 / 380 * 100%);
+          }
+
+          p {
+            margin-top: 12px;
+            font-size: 1.2rem;
+            letter-spacing: 0.384px;
+            line-height: 1.75;
+          }
+        }
+      }
+    }
+
+    &_loading {
+      margin: 120px auto 0;
+      width: fit-content;
+
+      svg {
+        line {
+            stroke: var(--black-cl);
+        }
+      }
+
+      @include maxW(1023px) {
+        margin-top: 40px;
+
+        svg {
+          width: 35px;
+          height: auto;
+        }
+      }
+    }
+  }
+}
