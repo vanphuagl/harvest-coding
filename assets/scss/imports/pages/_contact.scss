@@ -66,6 +66,10 @@
             font-family: $noto-fonts;
           }
         }
+
+        a {
+          display: inline-block;
+        }
       }
 
       @include maxW(1023px) {
@@ -124,6 +128,7 @@
           -webkit-box-sizing: border-box;
           box-sizing: border-box;
           position: relative;
+          border-radius: 0;
           -webkit-appearance: none;
         }
 
