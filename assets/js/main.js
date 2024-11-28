@@ -38,7 +38,7 @@ const initLenis = () => {
     lerp: 0.05,
     smoothWheel: true,
   });
-  lenis.on("scroll", (e) => {});
+  lenis.on("scroll", (e) => { });
   function raf(time) {
     lenis.raf(time);
     requestAnimationFrame(raf);
@@ -161,6 +161,23 @@ const stopVideo = function () {
     });
   }
 };
+
+// ===== form =====
+$("#js-checkbox").change(function () {
+  let isCheck = this.checked;
+  if (isCheck) {
+    $(this).addClass("active");
+    $(this).closest(".js-form").find(".js-send").addClass("active");
+  } else {
+    $(this).removeClass("active");
+    $(this).closest(".js-form").find(".js-send").removeClass("active");
+  }
+});
+
+$("#submit_btn").on("click", function (e) {
+  e.preventDefault();
+  $('.js-noti').fadeIn();
+})
 
 // ===== init =====
 const init = () => {
