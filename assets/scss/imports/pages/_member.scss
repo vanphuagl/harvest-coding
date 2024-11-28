@@ -187,6 +187,18 @@
     &_works {
       margin-top: 190px;
 
+      &_content {
+        cursor: pointer;
+
+        p {
+          margin-top: 15px;
+          font-size: 1.35rem;
+          font-weight: 700;
+          letter-spacing: 0.432px;
+          line-height: 1.8;
+        }
+      }
+
       &_list {
         margin-top: 60px;
         display: grid;
@@ -220,18 +232,19 @@
         &:hover figure img {
           transform: scale(1.08);
         }
-
-        p {
-          margin-top: 15px;
-          font-size: 1.35rem;
-          font-weight: 700;
-          letter-spacing: 0.432px;
-          line-height: 1.8;
-        }
       }
 
       @include maxW(1023px) {
         margin-top: 78px;
+
+        &_content {
+          p {
+            margin-top: 12px;
+            font-size: 1.2rem;
+            letter-spacing: 0.384px;
+            line-height: 1.75;
+          }
+        }
 
         &_list {
           margin-top: 40px;
@@ -243,19 +256,8 @@
           figure {
             padding-bottom: calc(208.13 / 380 * 100%);
           }
-
-          p {
-            margin-top: 12px;
-            font-size: 1.2rem;
-            letter-spacing: 0.384px;
-            line-height: 1.75;
-          }
         }
       }
-    }
-
-    &_content {
-      cursor: pointer;
     }
 
     &_loading {
@@ -286,11 +288,16 @@
       height: 100%;
       z-index: 999;
       background-color: rgba($color: #000000, $alpha: 0.7);
+      overflow: hidden;
+      display: none;
 
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow-y: auto;
+      &_wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+      }
 
       &_close {
         position: absolute;
@@ -322,11 +329,61 @@
 
       &_inner {
         width: 66.666666666667%;
+        max-width: 960px;
         height: max-content;
         margin: auto;
         max-height: 85%;
-        overflow: auto;
         position: relative;
+      }
+
+      &_video {
+        display: none;
+        position: relative;
+
+        iframe,
+        video {
+          width: 100%;
+          height: 100%;
+          aspect-ratio: 16 / 9;
+        }
+
+        p {
+          margin-bottom: 15px;
+          font-family: $noto-fonts;
+          font-size: 1.4rem;
+          font-weight: 700;
+          letter-spacing: 0.42px;
+          line-height: 1.87;
+        }
+      }
+
+      @include maxW(1023px) {
+        &_close {
+          width: 50px;
+          height: 50px;
+
+          top: 32px;
+          right: 22px;
+
+          span {
+            width: 42px;
+          }
+        }
+
+        &_inner {
+          width: 100%;
+          max-width: 100%;
+          padding: 0 22px;
+        }
+
+        &_video {
+          p {
+            margin-bottom: 30px;
+            font-size: 1.3rem;
+            letter-spacing: 0.39px;
+            line-height: 1.92;
+          }
+        }
       }
     }
 
@@ -363,6 +420,7 @@
         }
 
         button {
+          position: relative;
           cursor: pointer;
           width: 60px;
           height: 40px;
@@ -371,10 +429,34 @@
           font-size: 1.4rem;
           font-weight: 700;
           font-family: $noto-fonts;
+          transition-property: opacity;
+          transition-duration: 250ms;
+          transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+          &:before {
+            content: "";
+            background-color: #fff;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            mix-blend-mode: difference;
+            transform-origin: top left;
+            transform: scaleX(0);
+            transition-property: transform;
+            transition-duration: 250ms;
+            transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+          }
+
+          &:hover:before {
+            transform: scaleX(1);
+          }
         }
       }
 
-      p {
+      &_notes {
         max-width: 478px;
         margin: 100px auto 0;
         font-family: $noto-fonts;
@@ -383,6 +465,45 @@
         letter-spacing: 0.42px;
         line-height: 1.86;
         color: #fff;
+
+        a {
+          display: inline-block;
+          text-decoration: underline;
+          text-underline-offset: 3px;
+        }
+      }
+
+      @include maxW(1023px) {
+        padding: 0 28px;
+
+        form {
+          max-width: 100%;
+          column-gap: 11.2px;
+
+          label {
+            font-size: 1.4rem;
+            letter-spacing: 0.42px;
+            line-height: 1.79;
+          }
+
+          input {
+            font-size: 1.3rem;
+            letter-spacing: 0.39px;
+          }
+
+          button {
+            width: 56px;
+            height: 37px;
+            font-size: 1.3rem;
+          }
+        }
+
+        &_notes {
+          margin-top: 30px;
+          font-size: 1.3rem;
+          letter-spacing: 0.39px;
+          line-height: 1.85;
+        }
       }
     }
   }

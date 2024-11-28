@@ -1,7 +1,7 @@
 "use strict";
 
 // ===== change theme when 6:00pm =====
-function refreshTime() {
+const refreshTime = function () {
   const now = new Date().getHours();
   // show light theme from 6 am to 6 pm
   if (now >= 6 && now <= 17) {
@@ -9,8 +9,17 @@ function refreshTime() {
   } else {
     document.documentElement.setAttribute("data-theme", "dark");
   }
-}
+};
 setInterval(refreshTime, 1000);
+
+// ===== add event on multiple element =====
+const addEventOnElements = function (elements, eventType, callback) {
+  if (elements) {
+    for (let i = 0; i < elements.length; i++) {
+      elements[i].addEventListener(eventType, callback);
+    }
+  }
+};
 
 // ===== appheight =====
 const appHeight = () => {
@@ -29,7 +38,7 @@ const initLenis = () => {
     lerp: 0.05,
     smoothWheel: true,
   });
-  lenis.on("scroll", (e) => { });
+  lenis.on("scroll", (e) => {});
   function raf(time) {
     lenis.raf(time);
     requestAnimationFrame(raf);
@@ -81,6 +90,77 @@ const fadeIn = () => {
 };
 window.addEventListener("scroll", fadeIn);
 window.addEventListener("pageshow", fadeIn);
+
+// ===== popup =====
+const [popup, popupToggler, popupClose, headerContact] = [
+  document.querySelectorAll("[data-popup]"),
+  document.querySelectorAll("[data-popup-toggler]"),
+  document.querySelectorAll("[data-popup-close]"),
+  document.querySelector(".c-header_right"),
+];
+
+const closePopupAll = () => {
+  stopVideo();
+  headerContact.classList.remove("--hide");
+  $(`[data-popup]`).fadeOut();
+  $(`[data-popup-video]`).fadeOut();
+  setTimeout(() => {
+    $(`[data-popup-password]`).fadeIn();
+  }, 500);
+};
+
+popupToggler.forEach((itemElement) => {
+  const itemNumber = itemElement.getAttribute("data-popup-toggler");
+  const itemHasAttribute = itemElement.hasAttribute("data-password");
+  const popupElement = document.querySelector(`[data-popup="${itemNumber}"]`);
+
+  itemElement.addEventListener("click", () => {
+    closePopupAll();
+    if (popupElement) {
+      $(`[data-popup="${itemNumber}"]`).fadeIn();
+      headerContact.classList.add("--hide");
+
+      if (itemHasAttribute) {
+        $(`[data-popup="${itemNumber}"] [data-popup-video]`).fadeOut();
+      } else {
+        $(`[data-popup="${itemNumber}"] [data-popup-video]`).fadeIn();
+      }
+    }
+  });
+});
+
+popupClose.forEach((itemElement) => {
+  itemElement.addEventListener("click", () => {
+    closePopupAll();
+    stopVideo();
+  });
+});
+
+$(".detail_pass form button").on("click", function (e) {
+  e.preventDefault();
+  $(`[data-popup-password]`).fadeOut();
+  setTimeout(() => {
+    $(`[data-popup-video]`).fadeIn();
+  }, 500);
+});
+
+const stopVideo = function () {
+  const iframe = document.querySelectorAll(".detail_popup_video iframe");
+  const video = document.querySelectorAll(".detail_popup_video video");
+  // type iframe
+  if (iframe.length) {
+    iframe.forEach((item) => {
+      const iframeSrc = item.src;
+      item.src = iframeSrc;
+    });
+  }
+  // type video
+  if (video.length) {
+    video.forEach((item) => {
+      item.pause();
+    });
+  }
+};
 
 // ===== init =====
 const init = () => {

@@ -149,7 +149,7 @@
                         </div>
                     </div>
                 </div>
-
+                <!-- # -->
                 <div class="detail_works">
                     <div class="detail_heading">
                         <span></span>
@@ -158,7 +158,7 @@
                     <div class="detail_works_list">
                         <!-- ## -->
                         <div class="detail_works_items">
-                            <div class="detail_works_content">
+                            <div class="detail_works_content" data-popup-toggler="0" data-password>
                                 <figure>
                                     <img class="lazy" data-src="/assets/img/member/works.webp" alt="Suntory サン生"
                                         width="380" height="213.75" loading="lazy">
@@ -166,23 +166,34 @@
                                 <p>Suntory サン生</p>
                             </div>
                             <!-- // -->
-                            <div class="detail_popup">
-                                <div class="detail_popup_close">
+                            <div class="detail_popup" data-popup="0">
+                                <div class="detail_popup_close" data-popup-close>
                                     <span></span>
                                     <span></span>
                                 </div>
-                                <div class="detail_popup_inner">
-                                    <div class="detail_popup_content">
-                                        <div class="detail_pass">
-                                            <form>
-                                                <label for="password">パスワードを入力してください</label>
-                                                <input type="password" id="password" value="">
-                                                <button>送信</button>
-                                            </form>
-                                            <p>
-                                                ※ こちらの動画はパスワードが必要です。<br />
-                                                動画の視聴をご希望の方はこちらよりパスワードを請求してください
-                                            </p>
+                                <div class="detail_popup_wrapper">
+                                    <div class="detail_popup_inner">
+                                        <div class="detail_popup_content">
+                                            <div class="detail_pass" data-popup-password>
+                                                <form>
+                                                    <label for="password">パスワードを入力してください</label>
+                                                    <input type="password" id="password" value="">
+                                                    <button>送信</button>
+                                                </form>
+                                                <div class="detail_pass_notes">
+                                                    ※ こちらの動画はパスワードが必要です。<br />
+                                                    動画の視聴をご希望の方はこ<a href="/contact/password.html">ちらより</a>パスワードを請求してください
+                                                </div>
+                                            </div>
+                                            <div class="detail_popup_video" data-popup-video>
+                                                <p>Suntory サン生</p>
+                                                <iframe width="560" height="315"
+                                                    src="https://www.youtube.com/embed/xMPW9FWDFV0??fs=0&amp;rel=0&amp;modestbranding=1&amp;iv_load_policy=3&amp;start=0"
+                                                    title="YouTube video player" frameborder="0"
+                                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                                                </iframe>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -190,147 +201,411 @@
                         </div>
                         <!-- ## -->
                         <div class="detail_works_items">
-                            <figure>
-                                <img class="lazy" data-src="/assets/img/member/works.webp" alt="タイトルが入ります。タイトルが入ります。タイトルが入り
-                                ます。タイトルが入ります。" width="380" height="213.75" loading="lazy">
-                            </figure>
-                            <p>
-                                タイトルが入ります。タイトルが入ります。タイトルが入り<br />
-                                ます。タイトルが入ります。
-                            </p>
+                            <div class="detail_works_content" data-popup-toggler="1">
+                                <figure>
+                                    <img class="lazy" data-src="/assets/img/member/works.webp" alt="タイトルが入ります。タイトルが入ります。タイトルが入り
+                                    ます。タイトルが入ります。" width="380" height="213.75" loading="lazy">
+                                </figure>
+                                <p>
+                                    タイトルが入ります。タイトルが入ります。タイトルが入り<br />
+                                    ます。タイトルが入ります。
+                                </p>
+                            </div>
+                            <!-- // -->
+                            <div class="detail_popup" data-popup="1">
+                                <div class="detail_popup_close" data-popup-close>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <div class="detail_popup_wrapper">
+                                    <div class="detail_popup_inner">
+                                        <div class="detail_popup_content">
+                                            <div class="detail_popup_video" data-popup-video>
+                                                <p>Suntory サン生</p>
+                                                <video controls>
+                                                    <source
+                                                        src="https://www.suntory.co.jp/whisky/yamazaki/mp4/movie_pc.mp4"
+                                                        type="video/mp4">
+                                                </video>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <!-- ## -->
                         <div class="detail_works_items">
-                            <figure>
-                                <img class="lazy" data-src="/assets/img/member/works.webp" alt="タイトルが入ります。タイトルが入ります。タイトルが入り
-                                                        ます。タイトルが入ります。" width="380" height="213.75" loading="lazy">
-                            </figure>
-                            <p>
-                                タイトルが入ります。タイトルが入ります。タイトルが入り<br />
-                                ます。タイトルが入ります。
-                            </p>
+                            <div class="detail_works_content" data-popup-toggler="2">
+                                <figure>
+                                    <img class="lazy" data-src="/assets/img/member/works.webp"
+                                        alt="タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。" width="380" height="213.75"
+                                        loading="lazy">
+                                </figure>
+                                <p>
+                                    タイトルが入ります。タイトルが入ります。タイトルが入り<br />
+                                    ます。タイトルが入ります。
+                                </p>
+                            </div>
+                            <!-- // -->
+                            <div class="detail_popup" data-popup="2">
+                                <div class="detail_popup_close" data-popup-close>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <div class="detail_popup_wrapper">
+                                    <div class="detail_popup_inner">
+                                        <div class="detail_popup_content">
+                                            <div class="detail_popup_video" data-popup-video>
+                                                <p>Suntory サン生</p>
+                                                <video controls>
+                                                    <source
+                                                        src="https://www.suntory.co.jp/whisky/yamazaki/mp4/movie_pc.mp4"
+                                                        type="video/mp4">
+                                                </video>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <!-- ## -->
                         <div class="detail_works_items">
-                            <figure>
-                                <img class="lazy" data-src="/assets/img/member/works.webp" alt="Suntory サン生" width="380"
-                                    height="213.75" loading="lazy">
-                            </figure>
-                            <p>Suntory サン生</p>
+                            <div class="detail_works_content" data-popup-toggler="3" data-password>
+                                <figure>
+                                    <img class="lazy" data-src="/assets/img/member/works.webp" alt="Suntory サン生"
+                                        width="380" height="213.75" loading="lazy">
+                                </figure>
+                                <p>Suntory サン生</p>
+                            </div>
+                            <!-- // -->
+                            <div class="detail_popup" data-popup="3">
+                                <div class="detail_popup_close" data-popup-close>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <div class="detail_popup_wrapper">
+                                    <div class="detail_popup_inner">
+                                        <div class="detail_popup_content">
+                                            <div class="detail_pass" data-popup-password>
+                                                <form>
+                                                    <label for="password">パスワードを入力してください</label>
+                                                    <input type="password" id="password" value="">
+                                                    <button>送信</button>
+                                                </form>
+                                                <div class="detail_pass_notes">
+                                                    ※ こちらの動画はパスワードが必要です。<br />
+                                                    動画の視聴をご希望の方はこ<a href="/contact/password.html">ちらより</a>パスワードを請求してください
+                                                </div>
+                                            </div>
+                                            <div class="detail_popup_video" data-popup-video>
+                                                <p>Suntory サン生</p>
+                                                <iframe width="560" height="315"
+                                                    src="https://www.youtube.com/embed/xMPW9FWDFV0??fs=0&amp;rel=0&amp;modestbranding=1&amp;iv_load_policy=3&amp;start=0"
+                                                    title="YouTube video player" frameborder="0"
+                                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                                                </iframe>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <!-- ## -->
                         <div class="detail_works_items">
-                            <figure>
-                                <img class="lazy" data-src="/assets/img/member/works.webp" alt="タイトルが入ります。タイトルが入ります。タイトルが入り
-                                ます。タイトルが入ります。" width="380" height="213.75" loading="lazy">
-                            </figure>
-                            <p>
-                                タイトルが入ります。タイトルが入ります。タイトルが入り<br />
-                                ます。タイトルが入ります。
-                            </p>
+                            <div class="detail_works_content" data-popup-toggler="4">
+                                <figure>
+                                    <img class="lazy" data-src="/assets/img/member/works.webp"
+                                        alt="タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。" width="380" height="213.75"
+                                        loading="lazy">
+                                </figure>
+                                <p>
+                                    タイトルが入ります。タイトルが入ります。タイトルが入り<br />
+                                    ます。タイトルが入ります。
+                                </p>
+                            </div>
+                            <!-- // -->
+                            <div class="detail_popup" data-popup="4">
+                                <div class="detail_popup_close" data-popup-close>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <div class="detail_popup_wrapper">
+                                    <div class="detail_popup_inner">
+                                        <div class="detail_popup_content">
+                                            <div class="detail_popup_video" data-popup-video>
+                                                <p>Suntory サン生</p>
+                                                <video controls>
+                                                    <source
+                                                        src="https://www.suntory.co.jp/whisky/yamazaki/mp4/movie_pc.mp4"
+                                                        type="video/mp4">
+                                                </video>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <!-- ## -->
                         <div class="detail_works_items">
-                            <figure>
-                                <img class="lazy" data-src="/assets/img/member/works.webp" alt="タイトルが入ります。タイトルが入ります。タイトルが入り
-                                                        ます。タイトルが入ります。" width="380" height="213.75" loading="lazy">
-                            </figure>
-                            <p>
-                                タイトルが入ります。タイトルが入ります。タイトルが入り<br />
-                                ます。タイトルが入ります。
-                            </p>
+                            <div class="detail_works_content" data-popup-toggler="5">
+                                <figure>
+                                    <img class="lazy" data-src="/assets/img/member/works.webp"
+                                        alt="タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。" width="380" height="213.75"
+                                        loading="lazy">
+                                </figure>
+                                <p>
+                                    タイトルが入ります。タイトルが入ります。タイトルが入り<br />
+                                    ます。タイトルが入ります。
+                                </p>
+                            </div>
+                            <!-- // -->
+                            <div class="detail_popup" data-popup="5">
+                                <div class="detail_popup_close" data-popup-close>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <div class="detail_popup_wrapper">
+                                    <div class="detail_popup_inner">
+                                        <div class="detail_popup_content">
+                                            <div class="detail_popup_video" data-popup-video>
+                                                <p>Suntory サン生</p>
+                                                <video controls>
+                                                    <source
+                                                        src="https://www.suntory.co.jp/whisky/yamazaki/mp4/movie_pc.mp4"
+                                                        type="video/mp4">
+                                                </video>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <!-- ## -->
                         <div class="detail_works_items">
-                            <figure>
-                                <img class="lazy" data-src="/assets/img/member/works.webp" alt="Suntory サン生" width="380"
-                                    height="213.75" loading="lazy">
-                            </figure>
-                            <p>Suntory サン生</p>
+                            <div class="detail_works_content" data-popup-toggler="6" data-password>
+                                <figure>
+                                    <img class="lazy" data-src="/assets/img/member/works.webp" alt="Suntory サン生"
+                                        width="380" height="213.75" loading="lazy">
+                                </figure>
+                                <p>Suntory サン生</p>
+                            </div>
+                            <!-- // -->
+                            <div class="detail_popup" data-popup="6">
+                                <div class="detail_popup_close" data-popup-close>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <div class="detail_popup_wrapper">
+                                    <div class="detail_popup_inner">
+                                        <div class="detail_popup_content">
+                                            <div class="detail_pass" data-popup-password>
+                                                <form>
+                                                    <label for="password">パスワードを入力してください</label>
+                                                    <input type="password" id="password" value="">
+                                                    <button>送信</button>
+                                                </form>
+                                                <div class="detail_pass_notes">
+                                                    ※ こちらの動画はパスワードが必要です。<br />
+                                                    動画の視聴をご希望の方はこ<a href="/contact/password.html">ちらより</a>パスワードを請求してください
+                                                </div>
+                                            </div>
+                                            <div class="detail_popup_video" data-popup-video>
+                                                <p>Suntory サン生</p>
+                                                <iframe width="560" height="315"
+                                                    src="https://www.youtube.com/embed/xMPW9FWDFV0??fs=0&amp;rel=0&amp;modestbranding=1&amp;iv_load_policy=3&amp;start=0"
+                                                    title="YouTube video player" frameborder="0"
+                                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                                                </iframe>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <!-- ## -->
                         <div class="detail_works_items">
-                            <figure>
-                                <img class="lazy" data-src="/assets/img/member/works.webp" alt="タイトルが入ります。タイトルが入ります。タイトルが入り
-                                                        ます。タイトルが入ります。" width="380" height="213.75" loading="lazy">
-                            </figure>
-                            <p>
-                                タイトルが入ります。タイトルが入ります。タイトルが入り<br />
-                                ます。タイトルが入ります。
-                            </p>
+                            <div class="detail_works_content" data-popup-toggler="7">
+                                <figure>
+                                    <img class="lazy" data-src="/assets/img/member/works.webp"
+                                        alt="タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。" width="380" height="213.75"
+                                        loading="lazy">
+                                </figure>
+                                <p>
+                                    タイトルが入ります。タイトルが入ります。タイトルが入り<br />
+                                    ます。タイトルが入ります。
+                                </p>
+                            </div>
+                            <!-- // -->
+                            <div class="detail_popup" data-popup="7">
+                                <div class="detail_popup_close" data-popup-close>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <div class="detail_popup_wrapper">
+                                    <div class="detail_popup_inner">
+                                        <div class="detail_popup_content">
+                                            <div class="detail_popup_video" data-popup-video>
+                                                <p>Suntory サン生</p>
+                                                <video controls>
+                                                    <source
+                                                        src="https://www.suntory.co.jp/whisky/yamazaki/mp4/movie_pc.mp4"
+                                                        type="video/mp4">
+                                                </video>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <!-- ## -->
                         <div class="detail_works_items">
-                            <figure>
-                                <img class="lazy" data-src="/assets/img/member/works.webp" alt="タイトルが入ります。タイトルが入ります。タイトルが入り
-                                                                                ます。タイトルが入ります。" width="380"
-                                    height="213.75" loading="lazy">
-                            </figure>
-                            <p>
-                                タイトルが入ります。タイトルが入ります。タイトルが入り<br />
-                                ます。タイトルが入ります。
-                            </p>
+                            <div class="detail_works_content" data-popup-toggler="8">
+                                <figure>
+                                    <img class="lazy" data-src="/assets/img/member/works.webp"
+                                        alt="タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。" width="380" height="213.75"
+                                        loading="lazy">
+                                </figure>
+                                <p>
+                                    タイトルが入ります。タイトルが入ります。タイトルが入り<br />
+                                    ます。タイトルが入ります。
+                                </p>
+                            </div>
+                            <!-- // -->
+                            <div class="detail_popup" data-popup="8">
+                                <div class="detail_popup_close" data-popup-close>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <div class="detail_popup_wrapper">
+                                    <div class="detail_popup_inner">
+                                        <div class="detail_popup_content">
+                                            <div class="detail_popup_video" data-popup-video>
+                                                <p>Suntory サン生</p>
+                                                <video controls>
+                                                    <source
+                                                        src="https://www.suntory.co.jp/whisky/yamazaki/mp4/movie_pc.mp4"
+                                                        type="video/mp4">
+                                                </video>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <!-- ## -->
                         <div class="detail_works_items">
-                            <figure>
-                                <img class="lazy" data-src="/assets/img/member/works.webp" alt="Suntory サン生" width="380"
-                                    height="213.75" loading="lazy">
-                            </figure>
-                            <p>Suntory サン生</p>
+                            <div class="detail_works_content" data-popup-toggler="9" data-password>
+                                <figure>
+                                    <img class="lazy" data-src="/assets/img/member/works.webp" alt="Suntory サン生"
+                                        width="380" height="213.75" loading="lazy">
+                                </figure>
+                                <p>Suntory サン生</p>
+                            </div>
+                            <!-- // -->
+                            <div class="detail_popup" data-popup="9">
+                                <div class="detail_popup_close" data-popup-close>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <div class="detail_popup_wrapper">
+                                    <div class="detail_popup_inner">
+                                        <div class="detail_popup_content">
+                                            <div class="detail_pass" data-popup-password>
+                                                <form>
+                                                    <label for="password">パスワードを入力してください</label>
+                                                    <input type="password" id="password" value="">
+                                                    <button>送信</button>
+                                                </form>
+                                                <div class="detail_pass_notes">
+                                                    ※ こちらの動画はパスワードが必要です。<br />
+                                                    動画の視聴をご希望の方はこ<a href="/contact/password.html">ちらより</a>パスワードを請求してください
+                                                </div>
+                                            </div>
+                                            <div class="detail_popup_video" data-popup-video>
+                                                <p>Suntory サン生</p>
+                                                <iframe width="560" height="315"
+                                                    src="https://www.youtube.com/embed/xMPW9FWDFV0??fs=0&amp;rel=0&amp;modestbranding=1&amp;iv_load_policy=3&amp;start=0"
+                                                    title="YouTube video player" frameborder="0"
+                                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                                                </iframe>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <!-- ## -->
                         <div class="detail_works_items">
-                            <figure>
-                                <img class="lazy" data-src="/assets/img/member/works.webp" alt="タイトルが入ります。タイトルが入ります。タイトルが入り
-                                ます。タイトルが入ります。" width="380" height="213.75" loading="lazy">
-                            </figure>
-                            <p>
-                                タイトルが入ります。タイトルが入ります。タイトルが入り<br />
-                                ます。タイトルが入ります。
-                            </p>
+                            <div class="detail_works_content" data-popup-toggler="10">
+                                <figure>
+                                    <img class="lazy" data-src="/assets/img/member/works.webp"
+                                        alt="タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。" width="380" height="213.75"
+                                        loading="lazy">
+                                </figure>
+                                <p>
+                                    タイトルが入ります。タイトルが入ります。タイトルが入り<br />
+                                    ます。タイトルが入ります。
+                                </p>
+                            </div>
+                            <!-- // -->
+                            <div class="detail_popup" data-popup="10">
+                                <div class="detail_popup_close" data-popup-close>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <div class="detail_popup_wrapper">
+                                    <div class="detail_popup_inner">
+                                        <div class="detail_popup_content">
+                                            <div class="detail_popup_video" data-popup-video>
+                                                <p>Suntory サン生</p>
+                                                <video controls>
+                                                    <source
+                                                        src="https://www.suntory.co.jp/whisky/yamazaki/mp4/movie_pc.mp4"
+                                                        type="video/mp4">
+                                                </video>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <!-- ## -->
                         <div class="detail_works_items">
-                            <figure>
-                                <img class="lazy" data-src="/assets/img/member/works.webp" alt="タイトルが入ります。タイトルが入ります。タイトルが入り
-                                                        ます。タイトルが入ります。" width="380" height="213.75" loading="lazy">
-                            </figure>
-                            <p>
-                                タイトルが入ります。タイトルが入ります。タイトルが入り<br />
-                                ます。タイトルが入ります。
-                            </p>
-                        </div>
-                        <!-- ## -->
-                        <div class="detail_works_items">
-                            <figure>
-                                <img class="lazy" data-src="/assets/img/member/works.webp" alt="Suntory サン生" width="380"
-                                    height="213.75" loading="lazy">
-                            </figure>
-                            <p>Suntory サン生</p>
-                        </div>
-                        <!-- ## -->
-                        <div class="detail_works_items">
-                            <figure>
-                                <img class="lazy" data-src="/assets/img/member/works.webp" alt="タイトルが入ります。タイトルが入ります。タイトルが入り
-                                                        ます。タイトルが入ります。" width="380" height="213.75" loading="lazy">
-                            </figure>
-                            <p>
-                                タイトルが入ります。タイトルが入ります。タイトルが入り<br />
-                                ます。タイトルが入ります。
-                            </p>
-                        </div>
-                        <!-- ## -->
-                        <div class="detail_works_items">
-                            <figure>
-                                <img class="lazy" data-src="/assets/img/member/works.webp" alt="タイトルが入ります。タイトルが入ります。タイトルが入り
-                                                                                ます。タイトルが入ります。" width="380"
-                                    height="213.75" loading="lazy">
-                            </figure>
-                            <p>
-                                タイトルが入ります。タイトルが入ります。タイトルが入り<br />
-                                ます。タイトルが入ります。
-                            </p>
+                            <div class="detail_works_content" data-popup-toggler="11">
+                                <figure>
+                                    <img class="lazy" data-src="/assets/img/member/works.webp"
+                                        alt="タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。" width="380" height="213.75"
+                                        loading="lazy">
+                                </figure>
+                                <p>
+                                    タイトルが入ります。タイトルが入ります。タイトルが入り<br />
+                                    ます。タイトルが入ります。
+                                </p>
+                            </div>
+                            <!-- // -->
+                            <div class="detail_popup" data-popup="11">
+                                <div class="detail_popup_close" data-popup-close>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <div class="detail_popup_wrapper">
+                                    <div class="detail_popup_inner">
+                                        <div class="detail_popup_content">
+                                            <div class="detail_popup_video" data-popup-video>
+                                                <p>Suntory サン生</p>
+                                                <video controls>
+                                                    <source
+                                                        src="https://www.suntory.co.jp/whisky/yamazaki/mp4/movie_pc.mp4"
+                                                        type="video/mp4">
+                                                </video>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="detail_loading">
