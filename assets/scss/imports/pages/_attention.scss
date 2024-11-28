@@ -3,4 +3,75 @@
 /* -------------------------------------------------------------------------- */
 
 .attentionpage {
+  .attention {
+    &_container {
+      padding-top: 218px;
+
+      @include maxW(1023px) {
+        padding-top: 125px;
+      }
+    }
+
+    &_wrapper {
+      max-width: 628px;
+      margin: 0 auto;
+      position: relative;
+
+      h3,h4,p {
+        font-family: $noto-fonts;
+        font-size: 1.2rem;
+        letter-spacing: 0.72px;
+        line-height: 1.75;
+      }
+
+      @include maxW(1023px) {
+        max-width: 100%;
+        padding: 0 42px;
+      }
+    }
+
+    &_desc {
+      margin-top: 60px;
+      font-family: $noto-fonts;
+
+      h3 {
+        font-weight: 500;
+        margin-bottom: 30px;
+      }
+
+      @include maxW(1023px) {
+        margin-top: 50px;
+      }
+    }
+
+    &_article {
+      margin-top: 48px;
+      font-family: $noto-fonts;
+
+      h4 {
+        margin-bottom: 30px;
+      }
+
+      ol {
+        padding-top: 12px;
+        padding-left: 12px;
+      }
+
+      @include maxW(1023px) {
+        margin-top: 38px;
+
+        ol {
+          padding-top: 0;
+        }
+      }
+    }
+
+    &_updated {
+      margin-top: 53px;
+
+      @include maxW(1023px) {
+        margin-top: 43px;
+      }
+    }
+  }
 }
