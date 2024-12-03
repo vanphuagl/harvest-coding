@@ -11,18 +11,22 @@
 
   &_container {
     position: fixed;
-    top: 44px;
+    top: 0;
     width: 100%;
+    height: 110px;
     padding: 0 50px;
     z-index: 10;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: var(--header-cl);
 
-    @include maxW(1023px) {
-      top: 22px;
+
+    @include maxW(767px) {
+      top: 0;
       padding: 0 22px;
+      height: 55px;
     }
   }
 
@@ -33,7 +37,7 @@
       }
     }
 
-    @include maxW(1023px) {
+    @include maxW(767px) {
       svg {
         width: 90.46px;
         height: auto;
@@ -53,7 +57,7 @@
       text-transform: uppercase;
     }
 
-    @include maxW(1023px) {
+    @include maxW(767px) {
       a {
         font-size: 1.1rem;
       }

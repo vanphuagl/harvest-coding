@@ -7,7 +7,7 @@
     &_container {
       padding: 210px 120px 130px;
 
-      @include maxW(1023px) {
+      @include maxW(767px) {
         padding: 125px 22px 0;
       }
     }
@@ -100,7 +100,7 @@
         }
       }
 
-      @include maxW(1023px) {
+      @include maxW(767px) {
         &_inner {
           margin-top: 40px;
           display: block;
@@ -201,7 +201,7 @@
         }
       }
 
-      @include maxW(1023px) {
+      @include maxW(767px) {
         margin-top: 78px;
 
         &_content {
@@ -237,7 +237,7 @@
         }
       }
 
-      @include maxW(1023px) {
+      @include maxW(767px) {
         margin-top: 40px;
 
         svg {
@@ -325,7 +325,7 @@
         }
       }
 
-      @include maxW(1023px) {
+      @include maxW(767px) {
         &_close {
           width: 50px;
           height: 50px;
@@ -441,7 +441,7 @@
         }
       }
 
-      @include maxW(1023px) {
+      @include maxW(767px) {
         padding: 0 28px;
 
         form {

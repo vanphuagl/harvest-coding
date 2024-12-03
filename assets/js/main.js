@@ -10,7 +10,7 @@ const refreshTime = function () {
     document.documentElement.setAttribute("data-theme", "dark");
   }
 };
-setInterval(refreshTime, 1000);
+setInterval(refreshTime, 0);
 
 // ===== add event on multiple element =====
 const addEventOnElements = function (elements, eventType, callback) {
@@ -38,7 +38,7 @@ const initLenis = () => {
     lerp: 0.05,
     smoothWheel: true,
   });
-  lenis.on("scroll", (e) => { });
+  lenis.on("scroll", (e) => {});
   function raf(time) {
     lenis.raf(time);
     requestAnimationFrame(raf);
@@ -176,11 +176,13 @@ $("#js-checkbox").change(function () {
 
 $("#submit_btn").on("click", function (e) {
   e.preventDefault();
-  $('.js-noti').fadeIn();
-})
+  $(".js-noti").fadeIn();
+});
 
 // ===== init =====
 const init = () => {
+  // #
+  $("body").fadeIn("slow");
   // # app-height
   appHeight();
   // # lenis

@@ -27,7 +27,7 @@
         }
       }
 
-      @include maxW(1023px) {
+      @include maxW(767px) {
         h2 {
           svg {
             width: 300px;
@@ -48,7 +48,7 @@
         display: block;
         width: 1px;
         height: 100px;
-        background-color: #e3e3e3;
+        // background-color: #e3e3e3;
 
         &:before {
           content: "";
@@ -60,7 +60,7 @@
         }
       }
 
-      @include maxW(1023px) {
+      @include maxW(767px) {
         bottom: 60px;
       }
     }
@@ -74,18 +74,32 @@
       height: var(--app-height);
       position: relative;
 
-      @include maxW(1023px) {
+      @include maxW(767px) {
         height: 100%;
       }
     }
 
-    &_content {
+    &_inner {
+      width: 100%;
       max-width: 628px;
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
       z-index: 2;
+
+      @include maxW(767px) {
+        max-width: 100%;
+        position: initial;
+        transform: none;
+        padding: 135px 42px 0;
+      }
+    }
+
+    &_content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
       p {
         font-family: $noto-fonts;
@@ -99,11 +113,8 @@
         }
       }
 
-      @include maxW(1023px) {
-        max-width: 100%;
-        position: initial;
-        transform: none;
-        padding: 135px 42px 0;
+      @include maxW(767px) {
+        // display: block;
 
         p {
           font-size: 2.1rem;
@@ -112,13 +123,19 @@
           font-feature-settings: "palt" 1;
         }
       }
+
+      @include maxW(376px) {
+        p {
+          font-size: 1.75rem;
+        }
+      }
     }
   }
 
   // ===== member =====
   .member {
     &_container {
-      @include maxW(1023px) {
+      @include maxW(767px) {
         padding: 140px 42px 0;
       }
     }
@@ -128,7 +145,7 @@
       margin: 0 auto;
       position: relative;
 
-      @include maxW(1023px) {
+      @include maxW(767px) {
         max-width: 100%;
       }
     }
@@ -152,7 +169,7 @@
         text-transform: uppercase;
       }
 
-      @include maxW(1023px) {
+      @include maxW(767px) {
         gap: 8px;
         margin-bottom: 52px;
 
@@ -178,7 +195,7 @@
         opacity: 0.5;
       }
 
-      @include maxW(1023px) {
+      @include maxW(767px) {
         margin-top: 32px;
 
         h3 {
@@ -203,7 +220,7 @@
         opacity: 0.5;
       }
 
-      @include maxW(1023px) {
+      @include maxW(767px) {
         margin-top: 25px;
         gap: 14px;
 
@@ -222,9 +239,10 @@
         font-size: 3.662rem;
         font-weight: 700;
         letter-spacing: 4.394px;
+        width: max-content;
       }
 
-      @include maxW(1023px) {
+      @include maxW(767px) {
         gap: 7px;
 
         p {
@@ -232,10 +250,17 @@
           letter-spacing: 0.88px;
         }
       }
+
+      @include maxW(375px) {
+        p {
+          font-size: 1.85rem;
+        }
+      }
     }
 
     &_enname {
       display: flex;
+      align-items: flex-end;
       gap: 12px;
 
       p {
@@ -251,6 +276,12 @@
           font-size: 1.238rem;
         }
       }
+
+      @include maxW(376px) {
+        p {
+          font-size: 0.85rem;
+        }
+      }
     }
 
     &_bar {
@@ -259,7 +290,7 @@
       height: 95px;
       background-color: var(--black-cl);
 
-      @include maxW(1023px) {
+      @include maxW(767px) {
         margin-top: 100px;
       }
     }
@@ -286,7 +317,7 @@
         }
       }
 
-      @include maxW(1023px) {
+      @include maxW(767px) {
         margin-top: 90px;
 
         a {

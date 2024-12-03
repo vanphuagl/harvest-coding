@@ -54,7 +54,7 @@ img.lazy {
   display: none !important;
 }
 
-@include maxW(1023px) {
+@include maxW(767px) {
   .pc-only {
     display: none !important;
   }
